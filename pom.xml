@@ -21,6 +21,7 @@
     <modules>
         <module>springcloud-service</module>
         <module>springcloud-eureka</module>
+        <module>springcloud-consumer</module>
     </modules>
 
 
