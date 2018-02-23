@@ -2,16 +2,16 @@ package com.aihuishou.consumer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
-import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients
-public class ConsumerApp {
+@EnableCircuitBreaker
+public class HystrixApp {
 
     @Bean
     @LoadBalanced
@@ -20,7 +20,7 @@ public class ConsumerApp {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(ConsumerApp.class, args);
+        SpringApplication.run(HystrixApp.class, args);
     }
 
 }

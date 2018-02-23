@@ -22,6 +22,8 @@
         <module>springcloud-service</module>
         <module>springcloud-eureka</module>
         <module>springcloud-consumer</module>
+        <module>springcloud-hystrix</module>
+        <module>springcloud-feign-hystrix</module>
     </modules>
 
 
@@ -36,5 +38,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
 
 </project>
